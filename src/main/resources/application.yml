@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+
+
+
+rocketmq:
+#  enabled: true
+#  accessKey: rocketmq2
+#  secretKey: 12345678
+#  proxy: 192.168.183.1:28080 # 代理地址
+#  topic: lo-topic
+  producer:
+    group: producer-group # 生产者组
+  consumer:
+    group: consumer-group # 消费者组
+  name-server: localhost:9876 # rocketMq的本地服务
+
+
+knife4j:
+  enable: true
+  openapi:
+    title: Knife4j测试文档
+    description: "`我是测试`,**你知道吗**
+    # aaa"
+    email: 1635156042@foxmail.com
+    concat: 灰太狼家的小鸭子
+    url: https://docs.xiaominfo.com
+    version: v4.0
+    license: Apache 2.0
+    license-url: https://stackoverflow.com/
+    terms-of-service-url: https://stackoverflow.com/
+    group:
+      test1:
+        group-name: 测试mq的接口
+        api-rule: package
+        api-rule-resources:
+          - com.jiang.springbootrocketmq.controller
